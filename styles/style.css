@@ -1,1 +1,95 @@
 /* место для вашего кода */
+
+/****** HEADER ******/
+.header {
+  padding: 92px 50px 96px;
+  border: 1px solid red;
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  height: 293px;
+}
+
+.header__menu-list {
+  display: flex;
+  list-style: circle;
+  list-style-position: inside;
+  font-size: 18px;
+  gap: 13px;
+  color: #000;
+}
+
+.header__menu-item {
+  _margin-left: -6px;
+}
+
+.header__menu-list li:first-child {
+  list-style: none;
+}
+
+.header__menu-link {
+  text-transform: lowercase;
+}
+
+.header__menu-link--active {
+  text-decoration: none;
+}
+
+.header__logo-link {
+  display: block;
+  width: 148px;
+  padding: 1.16px 10px 0.81px;
+  padding-right: 10px;
+  height: 105px;
+}
+
+.company__address{
+  width: 240px;
+  justify-self: right;
+  font-size: 18px;
+  line-height: 1.35;
+  font-style: normal;
+  color: #000;
+}
+
+.company__address span {
+  display: block;
+}
+
+.company__address-link {
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+/****** COVER ******/
+
+.cover {
+  background-image: url(../images/cover.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 757px;
+}
+
+.cover__header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  color: #fff;
+  padding: 165px 50px 207px;
+  text-transform: uppercase;
+  font-size: 100px;
+  line-height: 1.15;
+  letter-spacing: 0.3em;
+}
+
+.cover__header-item--center {
+  align-self: center;
+  margin-right: -0.3em;
+}
+
+.cover__header-item--right {
+  align-self: flex-end;
+  margin-right: -0.3em;
+}
