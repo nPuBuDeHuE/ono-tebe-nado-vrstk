@@ -13,10 +13,8 @@
     <header class="header">
       <nav class="header__menu">
         <ul class="header__menu-list">
-          <li>
-            <a href="#2" class="header__menu-link header__menu-link--active"
-              >главная</a
-            >
+          <li class="header__menu-item--nodisc">
+            <a href="#2" class="header__menu-link header__menu-link--active">главная</a>
           </li>
           <li class="header__menu-item">
             <a class="header__menu-link" href="#0">посмотреть лоты</a>
@@ -26,40 +24,39 @@
           </li>
         </ul>
       </nav>
-      <a href="#" class="header__logo-link"
-        ><img
+      <a href="#" class="header__logo-link">
+        <img
           src="images/logo-black.svg"
           alt="Логотип"
           class="header__logo-img"
-      /></a>
+        />
+      </a>
       <address class="header__address company__address">
-        <span
-          ><a class="company__address-link" href="tel:+99995555555"
-            >+9 999 555 5555</a
-          ></span
-        >
-        <span
-          ><a class="company__address-link" href="mailto:info@sobaka.ge"
-            >info@sobaka.ge</a
-          ></span
-        >
+        <span>
+          <a class="company__address-link" href="tel:+99995555555">+9 999 555 5555</a>
+        </span>
+        <span>
+          <a class="company__address-link" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+        </span>
         <span>наб. Принсенграхт 263- 265, Амстердам</span>
       </address>
     </header>
     <main>
       <section class="cover">
-        <h1 class="cover__header">
-          <span class="cover__header-item cover__header-item--left">оно</span>
-          <span class="cover__header-item cover__header-item--center">тебе</span>
-          <span class="cover__header-item cover__header-item--right">надо</span>
+        <div class="overlay"></div>
+        <h1 class="cover__title">
+          <span class="cover__title-item cover__title-item--left">оно</span>
+          <span class="cover__title-item cover__title-item--center">тебе</span>
+          <span class="cover__title-item cover__title-item--right">надо</span>
         </h1>
+
         <div class="description">
-          <p></p>
-          <button>Сделать ставку</button>
+          <p class="description__text description__text--specials">Аукцион вещей, в которые никто не верил</p>
+          <button class="description__button bet-button description__text--specials">Сделать ставку</button>
         </div>
       </section>
       <section class="lots">
-        <h2></h2>
+        <h2 class="lots__title">лоты</h2>
         <ul>
           <li>
             <a href=""></a>

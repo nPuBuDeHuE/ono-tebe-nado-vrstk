@@ -20,8 +20,8 @@
   color: #000;
 }
 
-.header__menu-item {
-  _margin-left: -6px;
+.header__menu-item--nodisc {
+  list-style: none;
 }
 
 .header__menu-list li:first-child {
@@ -30,6 +30,13 @@
 
 .header__menu-link {
   text-transform: lowercase;
+  display: inline-block;
+}
+
+/* сдвигаем второй и третий пункт меню влево */
+
+.header__menu-list li:not(:first-child) .header__menu-link {
+  margin-left: -6px;
 }
 
 .header__menu-link--active {
@@ -45,16 +52,14 @@
 }
 
 .company__address{
-  width: 240px;
-  justify-self: right;
+  display: flex;
+  flex-direction: column;
+  max-width: 240px;
+  justify-self: end;
   font-size: 18px;
   line-height: 1.35;
   font-style: normal;
   color: #000;
-}
-
-.company__address span {
-  display: block;
 }
 
 .company__address-link {
@@ -69,27 +74,81 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 757px;
+  min-height: 757px;
+  position: relative;
 }
 
-.cover__header {
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.cover__title {
+  position: relative;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
   color: #fff;
-  padding: 165px 50px 207px;
+  padding: 165px 50px 0;
   text-transform: uppercase;
   font-size: 100px;
   line-height: 1.15;
   letter-spacing: 0.3em;
+  z-index: 5;
 }
 
-.cover__header-item--center {
+.cover__title-item--center {
   align-self: center;
   margin-right: -0.3em;
 }
 
-.cover__header-item--right {
+.cover__title-item--right {
   align-self: flex-end;
   margin-right: -0.3em;
+}
+
+.description {
+  position: relative;
+  z-index: 5;
+  margin-left: 50px;
+  display: flex;
+  padding-top: 106px;
+  column-gap: 107px;
+  align-items: center;
+}
+
+.description__text--specials {
+  text-transform: uppercase;
+  font-size: 22px;
+  color: #fff;
+}
+
+.description__text {
+  word-spacing: 19px;
+  line-height: 1.27;
+}
+
+.description__button {
+  min-width: 256px;
+  min-height: 51px;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+
+/****** LOTS ******/
+
+
+
+.lots {
+  margin: 180px 24px 0;
+  min-width: 723px;
+}
+
+.lots__title {
+  padding-left: 40px;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
