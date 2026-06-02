@@ -5,7 +5,7 @@
   padding: 92px 50px 96px;
   border: 1px solid red;
   display: grid;
-  grid-template-rows: 1;
+  _grid-template-rows: 1;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   height: 293px;
@@ -81,7 +81,7 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 
@@ -131,15 +131,12 @@
 }
 
 .description__button {
-  min-width: 256px;
-  min-height: 51px;
+  padding: 12px 32px 11px 31px;
   border: 1px solid #fff;
   background-color: transparent;
 }
 
 /****** LOTS ******/
-
-
 
 .lots {
   margin: 180px 24px 0;
@@ -151,4 +148,79 @@
   font-size: 40px;
   font-weight: bold;
   text-transform: uppercase;
+  margin-bottom: 27px;
+}
+
+.lots__card-list {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.lots__card-list-item {
+  width: 334px;
+  min-height: 596px;
+}
+
+.card-link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 40px;
+
+}
+
+.card_type_film {
+  background-image: url(../images/card-lot-01.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.card_type_book {
+  background-image: url(../images/card-lot-02.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.card_type_picture {
+  background-image: url(../images/card-lot-03.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.card__title {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #fff;
+  z-index: 5;
+}
+
+.card__text {
+  color: #fff;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.2;
+  z-index: 5;
+}
+
+.lots__look-more-link {
+  display: inline-block;
+  text-transform: lowercase;
+  font-size: 20px;
+  margin-left: 40px;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
 }
