@@ -3,7 +3,6 @@
 /****** HEADER ******/
 .header {
   padding: 92px 50px 96px;
-  border: 1px solid red;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
@@ -28,26 +27,34 @@
 }
 
 .header__menu-link {
+  text-decoration: none;
   text-transform: lowercase;
   display: inline-block;
+  border-bottom: 1px solid #000;
 }
 
 /* сдвигаем второй и третий пункт меню влево */
 
 .header__menu-list li:not(:first-child) .header__menu-link {
-  margin-left: -6px;
+  margin-left: -5px;
 }
 
 .header__menu-link--active {
   text-decoration: none;
+  border-bottom: none;
 }
 
 .header__logo-link {
   display: block;
   width: 148px;
-  padding: 1.16px 10px 0.81px;
-  padding-right: 10px;
   height: 105px;
+  justify-self: center;
+  text-decoration: none;
+}
+
+.header__logo-img {
+  width: 100%;
+  height: 100%;
 }
 
 .company__address{
@@ -274,6 +281,7 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   margin: 0 50px 80px;
+  align-items: start;
 }
 
 .footer__address--position {
@@ -293,6 +301,18 @@
   align-items: center;
 }
 
+.footer__menu-link {
+  text-decoration: none;
+  text-transform: lowercase;
+  display: inline-block;
+  border-bottom: 1px solid #000;
+}
+
+.footer__menu-link--active {
+  text-decoration: none;
+  border-bottom: none;
+}
+
 .footer__social-list {
   list-style: none;
   display: flex;
@@ -305,8 +325,7 @@
   display: block;
   width: 48px;
   height: 48px;
-}
-
-.footer__menu-link--active {
   text-decoration: none;
 }
+
+
