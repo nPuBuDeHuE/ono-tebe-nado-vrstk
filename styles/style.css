@@ -5,7 +5,6 @@
   padding: 92px 50px 96px;
   border: 1px solid red;
   display: grid;
-  _grid-template-rows: 1;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   height: 293px;
@@ -54,12 +53,15 @@
 .company__address{
   display: flex;
   flex-direction: column;
-  max-width: 240px;
-  justify-self: end;
   font-size: 18px;
   line-height: 1.35;
   font-style: normal;
   color: #000;
+}
+
+.header__address--position {
+  justify-self: end;
+  max-width: 240px;
 }
 
 .company__address-link {
@@ -177,7 +179,6 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 48px 40px;
-
 }
 
 .card_type_film {
@@ -229,7 +230,6 @@
 
 .about {
   margin: 120px 24px 180px;
-  _border: 1px solid blue;
   min-width: 595px;
   display: grid;
   grid-template-columns: 334px auto;
@@ -265,4 +265,48 @@
   display: flex;
   flex-direction: column;
   row-gap: 24px;
+}
+
+
+/****** FOOTER ******/
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  margin: 0 50px 80px;
+}
+
+.footer__address--position {
+  max-width: 264px;
+}
+
+.footer__menu {
+  min-width: 163.9px;
+  font-size: 18px;
+}
+
+.footer__menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__social-list {
+  list-style: none;
+  display: flex;
+  max-width: 240px;
+  justify-self: right;
+  gap: 48px;
+}
+
+.footer__social-link {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.footer__menu-link--active {
+  text-decoration: none;
 }
