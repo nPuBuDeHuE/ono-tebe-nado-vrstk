@@ -6,7 +6,6 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  height: 293px;
 }
 
 .header__menu-list {
@@ -33,11 +32,20 @@
   border-bottom: 1px solid #000;
 }
 
-/* сдвигаем второй и третий пункт меню влево */
+/* сдвигаем второй и третий пункт меню влево
 
 .header__menu-list li:not(:first-child) .header__menu-link {
   margin-left: -5px;
 }
+
+Информация для встречи с наставником - для обсуждения
+По ТЗ для меню нужно использовать список с list-style=circle
+При этом управлять расстоянием между маркером и текстом нельзя
+А без этого верстка не укладывается в PixelPerfect
+Попытка использовать правило (выше) сталкивается с рекомендацией ревьюера: сдвигать пункты меню не через margin - нельзя
+Еще один вариант: использовать before, но возможно есть какой-то другой способ
+Поэтому пока просто убираю без соответствия PP
+*/
 
 .header__menu-link--active {
   text-decoration: none;
@@ -64,6 +72,7 @@
   line-height: 1.35;
   font-style: normal;
   color: #000;
+  align-items: flex-start;
 }
 
 .header__address--position {
@@ -74,6 +83,7 @@
 .company__address-link {
   text-decoration: none;
   border-bottom: 1px solid #000;
+  display: inline-block;
 }
 
 /****** COVER ******/
@@ -186,24 +196,20 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 48px 40px;
+  background-size: cover;
+  background-position: center;
 }
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .card__title {
